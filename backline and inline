@@ -12,6 +12,9 @@
         Section :- CSE18 </h2>
        <p> Address:- Kyari Tola ,Mau<br>
     275101 UTTAR PRADESH</p>
-    img <c:\Users\Fuzail Jarvis\Pictures\IMG-20250922-WA0018.jpg="(min-width: )" srcset="">
+    <img src="c:\Users\Fuzail Jarvis\Pictures\IMG-20250922-WA0018.jpg"
+    srcset="(min-width:50px) 50px,
+            (min-width:100px) 100px,
+            (min-width:150px) 150px">
 </body>
 </html>
