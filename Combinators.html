@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+       /* p{
+            color:blueviolet;
+        }
+        div p{
+            color:cornflowerblue;
+        }
+        #box p{
+            color:crimson;
+        }*/
+        #box >p{
+            color:bisque;
+        }
+        a:link{
+            text-decoration: none;font: size 120px; font-weight: bold;
+        }
+        a:hover{
+            color:blanchedalmond;text-shadow: 2px;
+        }
+        a:active{
+            color:aqua;
+        }
+        a:visited{
+            color:aquamarine;
+        }
+        /* ul li:nth-child(odd){
+            color: brown;
+        }
+        ul li:nth-child(even){
+            color: cadetblue;
+        } */
+         /* ul li:nth-child(2n+1){ */
+            /* color: darkcyan; */
+        /* } */
+        /* ul li:nth-child(2), ul li:nth-child(4){ */
+            /* color: darkgoldenrod; */
+        /* } */
+        ul li::first-letter{
+            color: darkgreen;font-size: 200%;
+        }
+        ul li::first-line{
+            color: blueviolet;font-size: 90%;
+        }
+        ul li::after{
+            content: "read more";
+            color: coral;
+        }
+        ::marker{
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repudiandae similique molestiae,
+            dicta aut, ut neque commodi aliquid natus laborum qui vero adipisci molestias sed quae consectetur numquam delectus inventore.
+        </p>
+    </div>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolor! Officia error ex et in dolorum.
+        Sequi qui iste ullam earum est deleniti minus aliquid doloribus et, repellat aspernatur. Recusandae?
+    </p>
+    <ul class="1">
+        <li>CSE11</li>
+        <li>CSE12</li>
+        <li>CSE13</li>
+        <li>CSE14</li>
+        <li>CSE15</li>
+        <li>CSE16</li>
+        <li>CSE17</li>
+        <li>CSE18</li>
+        <li>CSE19</li>
+        <li>CSE20</li>
+        <li>CSE21</li>
+        <li>CSE22</li>
+        <li>CSE23</li>
+        <li>CSE24</li>
+    </ul>
+    <div>
+        
+    </div>
+</body>
+</html>
