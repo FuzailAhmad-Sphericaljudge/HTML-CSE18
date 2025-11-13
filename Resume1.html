@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Creative Resume</title>
+  <style>
+    :root {
+      --accent: #1565c0;
+      --accent2: #f9a825;
+      --bg: #edf8fa;
+      --card: #fff;
+      --shadow: 0 8px 40px rgba(60,90,150,0.13);
+    }
+    body {
+      background: linear-gradient(120deg, #e0eafc, #cfdef3 90%);
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #0b2340;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+    }
+    .sidebar {
+      background: linear-gradient(135deg, var(--accent) 70%, var(--accent2) 110%);
+      padding: 40px 32px 32px 32px;
+      flex: 0 0 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      min-height: 100%;
+    }
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid var(--accent2);
+      box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+    .side-title {
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 1.6px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .side-list {
+      list-style:none;
+      padding:0;
+      font-size:1em;
+    }
+    .side-list li {
+      margin-bottom: 8px;
+    }
+    .main {
+      padding: 42px 45px 40px 30px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+    }
+    .header h1 {
+      font-size: 2.7em;
+      font-weight: bold;
+      color: var(--accent);
+      margin: 0 0 7px 0;
+      letter-spacing: 2px;
+    }
+    .header h2 {
+      font-size: 1.38em;
+      color: var(--accent2);
+      margin: 0 0 15px 0;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      font-size: 1em;
+      gap: 16px;
+    }
+    .contact-info span {
+      background: #edf8fa;
+      padding: 5px 15px;
+      border-radius: 50px;
+      margin-bottom:5px;
+      box-shadow: 0 2px 10px rgba(21,101,192,0.05);
+    }
+    .section {
+      margin-bottom: 29px;
+    }
+    .section h3 {
+      font-size: 1.25em;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+      border-bottom: 2px dashed var(--accent2);
+      display: inline-block;
+      padding-bottom:4px;
+    }
+    .education-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    .education-table th, .education-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e3e9ff;
+      text-align: left;
+      font-size: 1em;
+    }
+    .skills-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 8px;
+    }
+    .chip {
+      background: linear-gradient(90deg, #e0f7fa, #fffde7 70%);
+      color: var(--accent);
+      padding: 6px 18px;
+      border-radius: 18px;
+      font-size: 1em;
+      font-weight: 500;
+      border: 1px solid var(--accent2);
+    }
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      list-style-type: disc;
+      padding-left:22px;
+      margin:0;
+    }
+    .projects-list li {
+      background: #fafcff;
+      box-shadow: 0 2px 8px rgba(21,101,192,0.06);
+      border-radius: 8px;
+      padding: 10px 15px;
+      color: #276c9b;
+      font-size: 1em;
+    }
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .cert-list li {
+      background: linear-gradient(90deg,#fffde7,#e0f7fa 60%);
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      border: 1px solid var(--accent2);
+      font-size: 1em;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 1em;
+      padding-top: 16px;
+      margin-top: 14px;
+      border-top: 1.5px dotted #dbeffa;
+      letter-spacing: 1px;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+      margin: 8px 0 0 0;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 8px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent2);
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 5px rgba(60,90,150,0.08);
+    }
+    @media (max-width: 980px) {
+      .resume-container{
+        flex-direction: column;
+        max-width: 97vw;
+        margin:18px auto;
+      }
+      .main{
+        padding:30px 18px 30px 18px;
+      }
+      .sidebar{
+        flex:1;
+        padding:34px 20px 20px 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      .header h1 {font-size:2em;}
+      .sidebar{padding:15px 8px;}
+      .main{padding:15px 7px;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+  <div class="sidebar">
+    <img class="profile-photo" src="WhatsApp Image 2025-11-14 at 00.54.17_755d095e.jpg" alt="Your Photo">
+    <div class="side-title">Contact</div>
+    <ul class="side-list">
+      <li>Ghaziabad, India</li>
+      <li>✉️ fuzailahmad2006@gmail.com</li>
+      <li>📱 +91-8604086686</li>
+      <li>🔗 LinkedIn / GitHub</li>
+    </ul>
+    <div class="side-title" style="margin-top:18px;">Languages</div>
+    <ul class="side-list">
+      <li>English (Fluent)</li>
+      <li>Hindi (Native)</li>
+      <li>Urdu</li>
+      <li>Arabic</li>
+    </ul>
+    <div class="side-title" style="margin-top:18px;">Interests</div>
+    <ul class="side-list">
+      <li>Robotics & IoT</li>
+      <li>Quantum Computing</li>
+      <li>Technical Blogging</li>
+      <li>Hackathons</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h1>Fuzail Ahmad</h1>
+      <h2>Engineering Student | Computer Science And Engineering</h2>
+      <div class="contact-info">
+        <span>Ghaziabad</span>
+        <span>fuzailahmad2006@gmail.com</span>
+        <span>+91-8604086686</span>
+        <span>https://github.com/FuzailAhmad-Sphericaljudge/HTML-CSE18.git</span>
+        <span>FuzailAhmad-Sphericaljudge</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Profile</h3>
+      <p>
+        Passionate engineering student specializing in <b>Computer Science And Engineeringand AI</b> with hands-on expertise in <b>C++, Python, and IoT systems</b>. Committed to solving real-world problems through <b>innovation</b> and advanced technology integration.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>B.Tech in Com[puter Science And Engineering</strong> – ABES Institute of Technology (2025–2029)
+        </div>
+        <div class="timeline-item">
+          <strong>Higher Secondary Education</strong> – Fatima School (2022–2024)
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Technical Skills</h3>
+      <div class="skills-chips">
+        <div class="chip">C++</div>
+        <div class="chip">Python</div>
+        <div class="chip">Arduino</div>
+        <div class="chip">Java</div>
+        <div class="chip">Robotics</div>
+        <div class="chip">IoT</div>
+        <div class="chip">VSCode</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Projects</h3>
+      <ul class="projects-list">
+        <li>
+          <b>Workshop on AI</b> 
+        </li>
+        <li>
+          <b>Line Follower Robot</b> 
+        </li>
+        <li>
+          <b>Python Projects</b> 
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Certifications & Workshops</h3>
+      <ul class="cert-list">
+        <li>AI & Sensors Workshop (2025)</li>
+        <li>Arduino Robotics Bootcamp (2024)</li>
+        <li>Python Bootcamp(2024)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Extracurricular</h3>
+      <ul class="projects-list">
+        <li>Technical Website for Python Based Works</li>
+        <li>Kaggle Hackathon (2024)</li>
+        <li>Active technical blogger</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Fuzail Ahmad | Updated Nov 14, 2025 — Made with ❤️ and CSS
+      <p>
+      <b>Contact:8604086686</b>
+      <b>Instagram:FuzailAhmad0</b>
+      <b>Twitter:@SoulRyzen1</b>
+      <b>Gitnub:https://github.com/FuzailAhmad-Sphericaljudge/HTML-CSE18.git</b>
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
