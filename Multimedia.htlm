@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Pages</title>
+</head>
+<body>
+    <h1>Name :-Fuzail Ahmad<br>
+        Father's Name:- Mr. Intezar Ahmad<br>
+        Mother's Name:- Mrs . Maherukh Jabeen</h1>
+      <h2> Branch:-BTECH(CSE)<br>
+        Section :- CSE18 </h2>
+       <p> Address:- Kyari Tola ,Mau<br>
+    275101 UTTAR PRADESH</p>
+    <img src="c:\Users\Fuzail Jarvis\Pictures\IMG-20250922-WA0018.jpg"
+    srcset="(min-width:50px) 50px,
+            
+</body>
+</html>
